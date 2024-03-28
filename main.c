@@ -4,9 +4,9 @@ int main (int argc, char *argv[])
 {
     FILE *file;
 
-    if (argc != 1)
+    if (argc != 2)
     {
-        fprintf(stderr, "USAGE: monty file\n", argv[0]);
+        fprintf(stderr, "USAGE: monty file\n");
         exit(EXIT_FAILURE);
     }
 
