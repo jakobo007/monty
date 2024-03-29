@@ -1,6 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
-
+#define STACK_SIZE 1024
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -39,13 +39,22 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-typedef struct bus_s
-{
-	char *arg;
-	FILE *file;
-	char *line_content;
-	int lifi;
-}  bus_t;
-extern bus_t bus;
+// typedef struct bus_s
+// {
+// 	char *arg;
+// 	FILE *file;
+// 	char *line_content;
+// 	int lifi;
+// }  bus_t;
+// extern bus_t bus;
+
+stack_t *stack = NULL;
+void process_command(FILE *file);
+void free_stack(stack_t **stack);
+void open_file(const char *filename);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, int value);
 
 #endif
