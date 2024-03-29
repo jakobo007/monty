@@ -5,6 +5,7 @@ void process_command(FILE *file)
     char line[STACK_SIZE];
     char *token;
     unsigned int line_number = 0;
+    int value; 
 
     while (fgets(line, sizeof(line), file) != NULL)
     {
@@ -24,7 +25,6 @@ void process_command(FILE *file)
                 exit(EXIT_FAILURE);
             }
 
-            int value; 
             value = atoi(token);
             push(&stack, value);
         }
