@@ -39,7 +39,7 @@ void process_command(FILE *file)
         }
         else if (strcmp(token, "pall") == 0)
         {
-            pall(&stack, line_number);
+            pall(&stack);
         }
         else
         {
