@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 void process_command(FILE *file)
 {

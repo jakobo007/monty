@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 void push(stack_t **stack, int value)
 {
     stack_t *new_node;
