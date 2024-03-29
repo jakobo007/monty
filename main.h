@@ -39,16 +39,9 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-// typedef struct bus_s
-// {
-// 	char *arg;
-// 	FILE *file;
-// 	char *line_content;
-// 	int lifi;
-// }  bus_t;
-// extern bus_t bus;
-
 stack_t *stack = NULL;
+
+
 void process_command(FILE *file);
 void free_stack(stack_t **stack);
 void open_file(const char *filename);

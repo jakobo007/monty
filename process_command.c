@@ -24,7 +24,8 @@ void process_command(FILE *file)
                 exit(EXIT_FAILURE);
             }
 
-            int value = atoi(token);
+            int value; 
+            value = atoi(token);
             push(&stack, value);
         }
 
