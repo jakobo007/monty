@@ -5,7 +5,8 @@ void process_command(FILE *file)
     char line[STACK_SIZE];
     char *token;
     unsigned int line_number = 0;
-    int value; 
+    int value;
+    stack_t *stack;
 
     while (fgets(line, sizeof(line), file) != NULL)
     {

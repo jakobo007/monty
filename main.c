@@ -3,6 +3,8 @@
 
 int main(int argc, char *argv[])
 {
+    stack_t *stack;
+
     if (argc != 2)
     {
         fprintf(stderr, "USAGE: monty file\n");
@@ -11,6 +13,6 @@ int main(int argc, char *argv[])
 
     open_file(argv[1]);
     free_stack(&stack);
-    
+
     return (0);
 }
